@@ -1,0 +1,14 @@
+array=[0, 0, 0, 0]
+M=1
+N=2
+
+mth_max=array[M]
+nth_min=array[N]
+
+total_sum=mth_max+nth_min
+difference=mth_max-nth_min
+
+print("Mth maximum:",mth_max)
+print("Nth minimum:",nth_min)
+print("total sum:",total_sum)
+print("diffrence:",difference)

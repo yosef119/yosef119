@@ -1,0 +1,36 @@
+import math
+
+# Get numbers from the user
+print("Enter the numbers (one per line). Type 'done' to finish:")
+numbers = []
+
+while True:
+    user_input = input()
+    if user_input.lower() == 'done':
+        break
+    try:
+        number = int(user_input)
+        numbers.append(number)
+    except ValueError:
+        print("Please enter a valid integer or type 'done' to finish.")
+
+prime_count = 0
+composite_count = 0
+
+# Process each number to determine if it's prime or composite
+for num in numbers:
+    if num < 2:
+        continue  # Ignore numbers less than 2 (not prime or composite)
+    is_prime = True
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    if is_prime:
+        prime_count += 1
+    else:
+        composite_count += 1
+
+# Display the counts
+print(f"Total prime numbers: {prime_count}")
+print(f"Total composite numbers: {composite_count}")

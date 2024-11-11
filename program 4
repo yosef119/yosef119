@@ -1,0 +1,16 @@
+array = [16, 16, 16, 16, 16]
+M = 0
+N = 1
+
+
+mth_max = array[M]
+nth_min = array[N]
+
+total_sum = mth_max + nth_min
+difference = mth_max - nth_min
+
+
+print("Mth Maximum:", mth_max)
+print("Nth Minimum:", nth_min)
+print("Sum:", total_sum)
+print("Difference:", difference)

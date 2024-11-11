@@ -1,0 +1,19 @@
+# Sample input
+phrase = "SIGN UP AT-LEAST 1245 !@#$% 145*999=144855"
+
+reversed_phrase = ""
+word = ""
+
+# Iterate over each character in the phrase
+for char in phrase + " ":  # Adding a space at the end to capture the last word
+    if char != " ":
+        word += char  # Build the current word
+    else:
+        # Reverse the current word manually and add it to the result
+        for i in range(len(word) - 1, -1, -1):
+            reversed_phrase += word[i]
+        reversed_phrase += " "  # Add a space after each reversed word
+        word = ""  # Reset word for the next word
+
+# Print the final reversed phrase without the trailing space
+print(reversed_phrase.strip())
